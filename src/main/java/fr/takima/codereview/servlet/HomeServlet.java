@@ -1,4 +1,4 @@
-package com.example.codereview;
+package fr.takima.codereview.servlet;
 
 import java.io.*;
 
