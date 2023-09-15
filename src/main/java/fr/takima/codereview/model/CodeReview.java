@@ -1,19 +1,19 @@
-package fr.takima.codereview.servlet.model;
+package fr.takima.codereview.model;
 
 import java.time.LocalDate;
 
-public class Member {
+public class CodeReview {
     private int id;
     private String name;
-    private String email;
-    private java.time.LocalDate birthDate;
-    private  int id_promotion;
+    private String description;
+    private java.time.LocalDate datetime;
+    private int id_promotion;
 
-    public Member(int id, String name, String email, LocalDate birthDate, int id_promotion) {
+    public CodeReview(int id, String name, String description, LocalDate datetime, int id_promotion) {
         this.id = id;
         this.name = name;
-        this.email = email;
-        this.birthDate = birthDate;
+        this.description = description;
+        this.datetime = datetime;
         this.id_promotion = id_promotion;
     }
 
@@ -33,20 +33,20 @@ public class Member {
         this.name = name;
     }
 
-    public String getEmail() {
-        return email;
+    public String getDescription() {
+        return description;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public LocalDate getBirthDate() {
-        return birthDate;
+    public LocalDate getDatetime() {
+        return datetime;
     }
 
-    public void setBirthDate(LocalDate birthDate) {
-        this.birthDate = birthDate;
+    public void setDatetime(LocalDate datetime) {
+        this.datetime = datetime;
     }
 
     public int getId_promotion() {
@@ -59,11 +59,11 @@ public class Member {
 
     @Override
     public String toString() {
-        return "Member{" +
+        return "CodeReview{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", birthDate=" + birthDate +
+                ", description='" + description + '\'' +
+                ", datetime=" + datetime +
                 ", id_promotion=" + id_promotion +
                 '}';
     }

@@ -1,4 +1,4 @@
-package fr.takima.codereview.servlet.model;
+package fr.takima.codereview.model;
 
 public class Promotion {
     private int id;

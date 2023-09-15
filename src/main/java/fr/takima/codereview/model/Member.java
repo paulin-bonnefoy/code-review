@@ -1,19 +1,19 @@
-package fr.takima.codereview.servlet.model;
+package fr.takima.codereview.model;
 
 import java.time.LocalDate;
 
-public class CodeReview {
+public class Member {
     private int id;
     private String name;
-    private String description;
-    private java.time.LocalDate datetime;
-    private int id_promotion;
+    private String email;
+    private java.time.LocalDate birthDate;
+    private  int id_promotion;
 
-    public CodeReview(int id, String name, String description, LocalDate datetime, int id_promotion) {
+    public Member(int id, String name, String email, LocalDate birthDate, int id_promotion) {
         this.id = id;
         this.name = name;
-        this.description = description;
-        this.datetime = datetime;
+        this.email = email;
+        this.birthDate = birthDate;
         this.id_promotion = id_promotion;
     }
 
@@ -33,20 +33,20 @@ public class CodeReview {
         this.name = name;
     }
 
-    public String getDescription() {
-        return description;
+    public String getEmail() {
+        return email;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public LocalDate getDatetime() {
-        return datetime;
+    public LocalDate getBirthDate() {
+        return birthDate;
     }
 
-    public void setDatetime(LocalDate datetime) {
-        this.datetime = datetime;
+    public void setBirthDate(LocalDate birthDate) {
+        this.birthDate = birthDate;
     }
 
     public int getId_promotion() {
@@ -59,11 +59,11 @@ public class CodeReview {
 
     @Override
     public String toString() {
-        return "CodeReview{" +
+        return "Member{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                ", datetime=" + datetime +
+                ", email='" + email + '\'' +
+                ", birthDate=" + birthDate +
                 ", id_promotion=" + id_promotion +
                 '}';
     }
