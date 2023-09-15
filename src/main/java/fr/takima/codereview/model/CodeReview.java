@@ -3,21 +3,21 @@ package fr.takima.codereview.model;
 import java.time.LocalDate;
 
 public class CodeReview {
-    private int id;
+    private long id;
     private String name;
     private String description;
     private java.time.LocalDate datetime;
-    private int id_promotion;
+    private Promotion promotion;
 
-    public CodeReview(int id, String name, String description, LocalDate datetime, int id_promotion) {
+    public CodeReview(long id, String name, String description, LocalDate datetime, Promotion promotion) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.datetime = datetime;
-        this.id_promotion = id_promotion;
+        this.promotion = promotion;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
@@ -49,12 +49,12 @@ public class CodeReview {
         this.datetime = datetime;
     }
 
-    public int getId_promotion() {
-        return id_promotion;
+    public long getId_promotion() {
+        return promotion;
     }
 
-    public void setId_promotion(int id_promotion) {
-        this.id_promotion = id_promotion;
+    public void setId_promotion(long promotion) {
+        this.promotion = id_promotion;
     }
 
     @Override
@@ -64,7 +64,7 @@ public class CodeReview {
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", datetime=" + datetime +
-                ", id_promotion=" + id_promotion +
+                ", id_promotion=" + promotion +
                 '}';
     }
 }
