@@ -34,6 +34,7 @@
 |root||mysql.session|localhost|CONNECTION_ADMIN|G
 |root||root|localhost|CONNECTION_ADMIN|G
 |root||debian-sys-maint|localhost|CREATE|G
+|root||root||CREATE|G
 |root||root|localhost|CREATE|G
 |root||debian-sys-maint|localhost|CREATE ROLE|G
 |root||root|localhost|CREATE ROLE|G
@@ -156,6 +157,42 @@
 |root||root|localhost|XA_RECOVER_ADMIN|G
 |root||debian-sys-maint|localhost|grant option|G
 |root||root|localhost|grant option|G
+CodeReviewDB|schema||abourliatoux||ALTER|G
+CodeReviewDB|schema||root||ALTER|G
+CodeReviewDB|schema||abourliatoux||ALTER ROUTINE|G
+CodeReviewDB|schema||root||ALTER ROUTINE|G
+CodeReviewDB|schema||abourliatoux||CREATE|G
+CodeReviewDB|schema||root||CREATE|G
+CodeReviewDB|schema||abourliatoux||CREATE ROUTINE|G
+CodeReviewDB|schema||root||CREATE ROUTINE|G
+CodeReviewDB|schema||abourliatoux||CREATE TEMPORARY TABLES|G
+CodeReviewDB|schema||root||CREATE TEMPORARY TABLES|G
+CodeReviewDB|schema||abourliatoux||CREATE VIEW|G
+CodeReviewDB|schema||root||CREATE VIEW|G
+CodeReviewDB|schema||abourliatoux||DELETE|G
+CodeReviewDB|schema||root||DELETE|G
+CodeReviewDB|schema||abourliatoux||DROP|G
+CodeReviewDB|schema||root||DROP|G
+CodeReviewDB|schema||abourliatoux||EVENT|G
+CodeReviewDB|schema||root||EVENT|G
+CodeReviewDB|schema||abourliatoux||EXECUTE|G
+CodeReviewDB|schema||root||EXECUTE|G
+CodeReviewDB|schema||abourliatoux||INDEX|G
+CodeReviewDB|schema||root||INDEX|G
+CodeReviewDB|schema||abourliatoux||INSERT|G
+CodeReviewDB|schema||root||INSERT|G
+CodeReviewDB|schema||abourliatoux||LOCK TABLES|G
+CodeReviewDB|schema||root||LOCK TABLES|G
+CodeReviewDB|schema||abourliatoux||REFERENCES|G
+CodeReviewDB|schema||root||REFERENCES|G
+CodeReviewDB|schema||abourliatoux||SELECT|G
+CodeReviewDB|schema||root||SELECT|G
+CodeReviewDB|schema||abourliatoux||SHOW VIEW|G
+CodeReviewDB|schema||root||SHOW VIEW|G
+CodeReviewDB|schema||abourliatoux||TRIGGER|G
+CodeReviewDB|schema||root||TRIGGER|G
+CodeReviewDB|schema||abourliatoux||UPDATE|G
+CodeReviewDB|schema||root||UPDATE|G
 performance_schema|schema||mysql.session|localhost|SELECT|G
 sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <ServerVersion>8.0.34</ServerVersion>
@@ -1059,7 +1096,9 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     <collation id="287" parent="1" name="utf8mb4_zh_0900_as_cs">
       <Charset>utf8mb4</Charset>
     </collation>
-    <schema id="288" parent="1" name="codereview">
+    <schema id="288" parent="1" name="CodeReviewDB">
+      <IntrospectionTimestamp>2023-09-15.13:13:09</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2023-09-15.09:13:09</LocalIntrospectionTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="289" parent="1" name="information_schema">
@@ -1068,8 +1107,8 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <CollationName>utf8mb3_general_ci</CollationName>
     </schema>
     <schema id="290" parent="1" name="mydb">
-      <IntrospectionTimestamp>2023-09-15.17:15:50</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2023-09-15.13:15:50</LocalIntrospectionTimestamp>
+      <IntrospectionTimestamp>2023-09-15.13:40:51</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2023-09-15.09:40:51</LocalIntrospectionTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="291" parent="1" name="mysql">
@@ -1089,9 +1128,9 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <LocalIntrospectionTimestamp>2023-09-15.09:12:10</LocalIntrospectionTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="294" parent="1" name="test">
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </schema>
+    <user id="294" parent="1" name="abourliatoux">
+      <Plugin>caching_sha2_password</Plugin>
+    </user>
     <user id="295" parent="1" name="debian-sys-maint">
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
@@ -1112,121 +1151,124 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Plugin>caching_sha2_password</Plugin>
     </user>
     <user id="299" parent="1" name="root">
+      <Plugin>caching_sha2_password</Plugin>
+    </user>
+    <user id="300" parent="1" name="root">
       <Host>localhost</Host>
     </user>
-    <table id="300" parent="290" name="codeReview">
+    <table id="301" parent="290" name="codeReview">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="301" parent="290" name="member">
+    <table id="302" parent="290" name="member">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="302" parent="290" name="promo">
+    <table id="303" parent="290" name="promo">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <column id="303" parent="300" name="cote_review_id">
+    <column id="304" parent="301" name="cote_review_id">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="304" parent="300" name="name">
+    <column id="305" parent="301" name="name">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="305" parent="300" name="description">
+    <column id="306" parent="301" name="description">
       <DasType>varchar(45)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="306" parent="300" name="datetime">
+    <column id="307" parent="301" name="datetime">
       <DasType>datetime|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="307" parent="300" name="promo_promo_id">
+    <column id="308" parent="301" name="promo_promo_id">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <foreign-key id="308" parent="300" name="fk_codeReview_promo1">
+    <foreign-key id="309" parent="301" name="fk_codeReview_promo1">
       <ColNames>promo_promo_id</ColNames>
       <RefColNames>promo_id</RefColNames>
       <RefTableName>promo</RefTableName>
     </foreign-key>
-    <index id="309" parent="300" name="PRIMARY">
+    <index id="310" parent="301" name="PRIMARY">
       <ColNames>cote_review_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="310" parent="300" name="fk_codeReview_promo1_idx">
+    <index id="311" parent="301" name="fk_codeReview_promo1_idx">
       <ColNames>promo_promo_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="311" parent="300" name="PRIMARY">
+    <key id="312" parent="301" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="312" parent="301" name="name">
+    <column id="313" parent="302" name="name">
       <DasType>varchar(16)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="313" parent="301" name="email">
+    <column id="314" parent="302" name="email">
       <DasType>varchar(255)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="314" parent="301" name="birthdate">
+    <column id="315" parent="302" name="birthdate">
       <DasType>datetime|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="315" parent="301" name="idmember">
+    <column id="316" parent="302" name="idmember">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="316" parent="301" name="promo_promo_id">
+    <column id="317" parent="302" name="promo_promo_id">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <foreign-key id="317" parent="301" name="fk_member_promo1">
+    <foreign-key id="318" parent="302" name="fk_member_promo1">
       <ColNames>promo_promo_id</ColNames>
       <RefColNames>promo_id</RefColNames>
       <RefTableName>promo</RefTableName>
     </foreign-key>
-    <index id="318" parent="301" name="PRIMARY">
+    <index id="319" parent="302" name="PRIMARY">
       <ColNames>idmember</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="319" parent="301" name="fk_member_promo1_idx">
+    <index id="320" parent="302" name="fk_member_promo1_idx">
       <ColNames>promo_promo_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="320" parent="301" name="PRIMARY">
+    <key id="321" parent="302" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="321" parent="302" name="promo_id">
+    <column id="322" parent="303" name="promo_id">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="322" parent="302" name="name">
+    <column id="323" parent="303" name="name">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <index id="323" parent="302" name="PRIMARY">
+    <index id="324" parent="303" name="PRIMARY">
       <ColNames>promo_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="324" parent="302" name="PRIMARY">
+    <key id="325" parent="303" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>

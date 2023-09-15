@@ -21,48 +21,58 @@ USE `mydb` ;
 -- Table `mydb`.`promo`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`promo` (
-  `promo_id` INT NOT NULL,
-  `name` VARCHAR(255) NOT NULL,
-  PRIMARY KEY (`promo_id`));
+                                              `promo_id` INT NOT NULL,
+                                              `name` VARCHAR(255) NOT NULL,
+                                              PRIMARY KEY (`promo_id`));
 
+INSERT INTO `mydb`.`promo` (promo_id, name) VALUES (1,'Promo Janvier 2023');
+INSERT INTO `mydb`.`promo` (promo_id, name) VALUES (2,'Promo Decembre 2022');
+INSERT INTO `mydb`.`promo` (promo_id, name) VALUES (3,'Promo Mai 2021');
 
 -- -----------------------------------------------------
 -- Table `mydb`.`member`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`member` (
-  `name` VARCHAR(16) NOT NULL,
-  `email` VARCHAR(255) NULL,
-  `birthdate` DATETIME NOT NULL,
-  `idmember` INT NOT NULL,
-  `promo_promo_id` INT NOT NULL,
-  PRIMARY KEY (`idmember`),
-  INDEX `fk_member_promo1_idx` (`promo_promo_id` ASC) VISIBLE,
-  CONSTRAINT `fk_member_promo1`
-    FOREIGN KEY (`promo_promo_id`)
-    REFERENCES `mydb`.`promo` (`promo_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+                                               `name` VARCHAR(16) NOT NULL,
+                                               `email` VARCHAR(255) NULL,
+                                               `birthdate` DATETIME NOT NULL,
+                                               `idmember` INT NOT NULL,
+                                               `promo_promo_id` INT NOT NULL,
+                                               PRIMARY KEY (`idmember`),
+                                               INDEX `fk_member_promo1_idx` (`promo_promo_id` ASC) VISIBLE,
+                                               CONSTRAINT `fk_member_promo1`
+                                                   FOREIGN KEY (`promo_promo_id`)
+                                                       REFERENCES `mydb`.`promo` (`promo_id`)
+                                                       ON DELETE NO ACTION
+                                                       ON UPDATE NO ACTION);
 
+INSERT INTO `mydb`.`member` (name, email, birthdate, idmember, promo_promo_id ) VALUES ('Juliette','juliette@taki',2000-12-23,1,1);
+INSERT INTO `mydb`.`member` (name, email, birthdate, idmember, promo_promo_id ) VALUES ('Lucas','lucas@taki',2001-10-06,2,2);
+INSERT INTO `mydb`.`member` (name, email, birthdate, idmember, promo_promo_id ) VALUES ('Aurelien','aurelien@taki',2003-04-14,3,2);
+INSERT INTO `mydb`.`member` (name, email, birthdate, idmember, promo_promo_id ) VALUES ('Paulin','paulin@taki',2001-02-23,4,3);
+INSERT INTO `mydb`.`member` (name, email, birthdate, idmember, promo_promo_id ) VALUES ('Lea','lea@taki',2001-06-13,5,3);
 
 -- -----------------------------------------------------
 -- Table `mydb`.`codeReview`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`codeReview` (
-  `cote_review_id` INT NOT NULL,
-  `name` VARCHAR(255) NOT NULL,
-  `description` VARCHAR(45) NULL,
-  `datetime` DATETIME NULL,
-  `promo_promo_id` INT NOT NULL,
-  PRIMARY KEY (`cote_review_id`),
-  INDEX `fk_codeReview_promo1_idx` (`promo_promo_id` ASC) VISIBLE,
-  CONSTRAINT `fk_codeReview_promo1`
-    FOREIGN KEY (`promo_promo_id`)
-    REFERENCES `mydb`.`promo` (`promo_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+                                                   `cote_review_id` INT NOT NULL,
+                                                   `name` VARCHAR(255) NOT NULL,
+                                                   `description` VARCHAR(45) NULL,
+                                                   `datetime` DATETIME NULL,
+                                                   `promo_promo_id` INT NOT NULL,
+                                                   PRIMARY KEY (`cote_review_id`),
+                                                   INDEX `fk_codeReview_promo1_idx` (`promo_promo_id` ASC) VISIBLE,
+                                                   CONSTRAINT `fk_codeReview_promo1`
+                                                       FOREIGN KEY (`promo_promo_id`)
+                                                           REFERENCES `mydb`.`promo` (`promo_id`)
+                                                           ON DELETE NO ACTION
+                                                           ON UPDATE NO ACTION);
 
+INSERT INTO `mydb`.`codeReview` (cote_review_id, name, description, datetime, promo_promo_id ) VALUES (1,'1ere revu projet','definir les besoins du projet',2023-09-13,1);
+INSERT INTO `mydb`.`codeReview` (cote_review_id, name, description, datetime, promo_promo_id ) VALUES (2,'WelcomePool','la vie est cool',2023-09-22,2);
+INSERT INTO `mydb`.`codeReview` (cote_review_id, name, description, datetime, promo_promo_id ) VALUES (3,'WelcomePool bis','la vie est cool',2023-10-12,3);
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
-
