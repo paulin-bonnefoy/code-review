@@ -46,11 +46,11 @@ CREATE TABLE IF NOT EXISTS `mydb`.`member` (
                                                        ON DELETE NO ACTION
                                                        ON UPDATE NO ACTION);
 
-INSERT INTO `mydb`.`member` (name, email, birthdate, idmember, promo_promo_id ) VALUES ('Juliette','juliette@taki',2000-12-23,1,1);
-INSERT INTO `mydb`.`member` (name, email, birthdate, idmember, promo_promo_id ) VALUES ('Lucas','lucas@taki',2001-10-06,2,2);
-INSERT INTO `mydb`.`member` (name, email, birthdate, idmember, promo_promo_id ) VALUES ('Aurelien','aurelien@taki',2003-04-14,3,2);
-INSERT INTO `mydb`.`member` (name, email, birthdate, idmember, promo_promo_id ) VALUES ('Paulin','paulin@taki',2001-02-23,4,3);
-INSERT INTO `mydb`.`member` (name, email, birthdate, idmember, promo_promo_id ) VALUES ('Lea','lea@taki',2001-06-13,5,3);
+INSERT INTO `mydb`.`member` (name, email, birthdate, idmember, promo_promo_id ) VALUES ('Juliette','juliette@taki','2000-12-23',1,1);
+INSERT INTO `mydb`.`member` (name, email, birthdate, idmember, promo_promo_id ) VALUES ('Lucas','lucas@taki','2001-10-06',2,2);
+INSERT INTO `mydb`.`member` (name, email, birthdate, idmember, promo_promo_id ) VALUES ('Aurelien','aurelien@taki','2003-04-14',3,2);
+INSERT INTO `mydb`.`member` (name, email, birthdate, idmember, promo_promo_id ) VALUES ('Paulin','paulin@taki','2001-02-23',4,3);
+INSERT INTO `mydb`.`member` (name, email, birthdate, idmember, promo_promo_id ) VALUES ('Lea','lea@taki','2001-06-13',5,3);
 
 -- -----------------------------------------------------
 -- Table `mydb`.`codeReview`
@@ -69,9 +69,9 @@ CREATE TABLE IF NOT EXISTS `mydb`.`codeReview` (
                                                            ON DELETE NO ACTION
                                                            ON UPDATE NO ACTION);
 
-INSERT INTO `mydb`.`codeReview` (cote_review_id, name, description, datetime, promo_promo_id ) VALUES (1,'1ere revu projet','definir les besoins du projet',2023-09-13,1);
-INSERT INTO `mydb`.`codeReview` (cote_review_id, name, description, datetime, promo_promo_id ) VALUES (2,'WelcomePool','la vie est cool',2023-09-22,2);
-INSERT INTO `mydb`.`codeReview` (cote_review_id, name, description, datetime, promo_promo_id ) VALUES (3,'WelcomePool bis','la vie est cool',2023-10-12,3);
+INSERT INTO `mydb`.`codeReview` (cote_review_id, name, description, datetime, promo_promo_id ) VALUES (1,'1ere revu projet','definir les besoins du projet','2023-09-13',1);
+INSERT INTO `mydb`.`codeReview` (cote_review_id, name, description, datetime, promo_promo_id ) VALUES (2,'WelcomePool','la vie est cool','2023-09-22',2);
+INSERT INTO `mydb`.`codeReview` (cote_review_id, name, description, datetime, promo_promo_id ) VALUES (3,'WelcomePool bis','la vie est cool','2023-10-12',3);
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
