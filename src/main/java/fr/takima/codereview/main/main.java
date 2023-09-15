@@ -12,9 +12,11 @@ public class main {
 
     public static void main(String args[]) throws DaoException {
 
-        Member paul = new Member(8, "Paul", "paul@takima.fr", LocalDate.now(), 2);
-        System.out.println(paul.toString());
-        memberDao.create(paul);
+//        Member paul = new Member(8, "Paul", "paul@takima.fr", LocalDate.now(), 2);
+//        System.out.println(paul.toString());
+//        memberDao.create(paul);
+
+        System.out.println(memberDao.findById(8));
 
     }
 }
