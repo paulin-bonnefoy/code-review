@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68aa635b-65b2-4ba4-b6e6-8d6777923726" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/servlet/CreatePromotionsServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/promotions/details.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/servlet/members/CreateMembersServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/members/details.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +55,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "promotions",
+    "git-widget-placeholder": "develop",
     "last_opened_file_path": "/home/takima/Documents/code-review/src/main/java/fr/takima/codereview/servlet",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
