@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68aa635b-65b2-4ba4-b6e6-8d6777923726" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/connection/ConnectionManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/dao/MemberDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/main/main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/servlet/reviews/CreateReviewServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/reviews/details.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/70719cfb-a3ea-4ca7-a76f-1afd55fbf95b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/70719cfb-a3ea-4ca7-a76f-1afd55fbf95b.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/70719cfb-a3ea-4ca7-a76f-1afd55fbf95b/storage_v2/_src_/schema/mydb.Kl8zAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/70719cfb-a3ea-4ca7-a76f-1afd55fbf95b/storage_v2/_src_/schema/mydb.Kl8zAA.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
@@ -22,8 +21,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="AnnotationType" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -65,14 +65,14 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "database.data.extractors.current.export.id": "Comma-separated (CSV)_id",
-    "git-widget-placeholder": "daoMembers",
+    "git-widget-placeholder": "reviews",
     "last_opened_file_path": "/home/takima/Bureau/code-review/DBJar/mysql-connector-java-8.1.0.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "MavenSettings",
@@ -88,6 +88,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="fr.takima.codereview.servlet.reviews" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/fr/takima/codereview/servlet" />
     </key>
@@ -99,14 +102,14 @@
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn wildfly:deploy" />
-      <command value="mvn clean install" />
-      <command value="mvn wildfly:run" />
       <command value="mvn wildfly:dev" />
-      <command value="mvn clean" />
       <command value="mvn install" />
+      <command value="mvn wildfly:run" />
+      <command value="mvn clean install" />
+      <command value="mvn clean" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.main">
+  <component name="RunManager" selected="Database Script.DBModel.sql">
     <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="fr.takima.codereview.main.main" />
       <module name="code-review" />
@@ -128,8 +131,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.main" />
         <item itemvalue="Database Script.DBModel.sql" />
+        <item itemvalue="Application.main" />
       </list>
     </recent_temporary>
   </component>
