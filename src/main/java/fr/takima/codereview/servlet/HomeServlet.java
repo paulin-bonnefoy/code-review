@@ -2,10 +2,11 @@ package fr.takima.codereview.servlet;
 
 import java.io.*;
 
+import jakarta.servlet.ServletException;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
-@WebServlet("/")
+@WebServlet("/home")
 public class HomeServlet extends HttpServlet {
     private String message;
 
@@ -13,14 +14,8 @@ public class HomeServlet extends HttpServlet {
         message = "Hello plp!";
     }
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.setContentType("text/html");
-
-        // Hello
-        PrintWriter out = response.getWriter();
-        out.println("<html><body>");
-        out.println("<h1>" + message + "</h1>");
-        out.println("</body></html>");
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        this.getServletContext().getRequestDispatcher("/resources/views/home.jsp").forward(request, response);
     }
 
     public void destroy() {
