@@ -25,7 +25,7 @@
 <div id="wrapper">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-static-top container-fluid" role="navigation" style="margin-bottom: 0">
+    <nav class="navbar navbar-default navbar-static-top container-fluid" role="navigation" style="margin-bottom: 0; background-color: #edecec">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -33,7 +33,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">When Is My Code Review?</a>
+            <a href="home"><img src="./resources/img/MyCodeReview.png" class="logo" alt=""  style="max-width: 200px"></a>
+
         </div>
         <!-- /.navbar-header -->
 
@@ -43,11 +44,11 @@
                     <i class="fa fa-gear fa-fw"></i> Gérer les code reviews <i class="fa fa-caret-down"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-user">
-                    <li><a href="add_promotion.html"><i class="fa fa-users fa-fw"></i> Ajouter une promotion</a>
+                    <li><a href="promotions"><i class="fa fa-users fa-fw"></i> Ajouter une promotion</a>
                     </li>
-                    <li><a href="add_member.html"><i class="fa fa-user fa-fw"></i> Ajouter un membre</a>
+                    <li><a href="members"><i class="fa fa-user fa-fw"></i> Ajouter un membre</a>
                     </li>
-                    <li><a href="add_event.html"><i class="fa fa-calendar fa-fw"></i> Créer un rendez-vous</a>
+                    <li><a href="codereviews"><i class="fa fa-calendar fa-fw"></i> Créer un rendez-vous</a>
                     </li>
                 </ul>
             </li>
@@ -57,7 +58,10 @@
     <div id="page-wrapper" class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Créer une promotion</h1>
+                <div style="display:flex; justify-content: center;">
+                    <img src="./resources/img/promotion.jpg" style="max-width: 400px; ">
+                </div>
+                <h1 class="page-header" style="display:flex; justify-content: center; color: #43009C">Créer une promotion</h1>
             </div>
             <!-- /.col-lg-12 -->
         </div>
@@ -69,10 +73,10 @@
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-xs-12">
-                                <form action="" method="post" class="">
+                                <form action="promotions" method="post" class="">
                                     <div class="form-group">
                                         <label for="name">Nom</label>
-                                        <input type="text" class="input-lg form-control" id="name" placeholder="Nom">
+                                        <input type="text" class="input-lg form-control" id="name" name="name" placeholder="Nom">
                                     </div>
 
                                     <div class="text-right">
@@ -98,7 +102,8 @@
 <footer class="footer">
     <div class="container">
         <div class="row text-center">
-            <img src="./resources/img/ebusiness.png" class="logo" alt=""> &bullet; 2017
+            <img src="./resources/img/logo_takima_horizontal.png" class="logo" alt="">
+            <h4>2023</h4>
         </div>
     </div>
 </footer>

@@ -1,4 +1,5 @@
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c"%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="fr">
@@ -9,13 +10,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>When Is My Code Review?</title>
+    <title>Code review n°${codeReview.id}</title>
 
     <!-- Bootstrap CSS -->
-    <link href="./resources/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="./resources/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="./resources/css/style.css" rel="stylesheet" type="text/css">
+    <link href="./resources/css/style.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -45,11 +46,11 @@
                     <i class="fa fa-gear fa-fw"></i> Gérer les code reviews <i class="fa fa-caret-down"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-user">
-                    <li><a href="promotions"><i class="fa fa-users fa-fw"></i> Ajouter une promotion</a>
+                    <li><a href="add_promotion.html"><i class="fa fa-users fa-fw"></i> Ajouter une promotion</a>
                     </li>
-                    <li><a href="members"><i class="fa fa-user fa-fw"></i> Ajouter un membre</a>
+                    <li><a href="add_member.html"><i class="fa fa-user fa-fw"></i> Ajouter un membre</a>
                     </li>
-                    <li><a href="codereviews"><i class="fa fa-calendar fa-fw"></i> Créer un rendez-vous</a>
+                    <li><a href="add_event.html"><i class="fa fa-calendar fa-fw"></i> Créer un rendez-vous</a>
                     </li>
                 </ul>
             </li>
@@ -59,10 +60,7 @@
     <div id="page-wrapper" class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
-                <div style="display:flex; justify-content: center;">
-                    <img src="./resources/img/member.jpg" style="max-width: 400px; ">
-                </div>
-                <h1 class="page-header" style="display: flex; justify-content: center; color: #43009C">Ajouter un membre</h1>
+                <h1 class="page-header">Ajouter une code review</h1>
             </div>
             <!-- /.col-lg-12 -->
         </div>
@@ -74,32 +72,28 @@
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-xs-12">
-                                <form action="members" method="post" class="">
-                                    <div class="form-group">
-                                        <label for="name">Nom</label>
-                                        <input type="text" name="name" class="input-lg form-control" id="name" placeholder="Nom">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="email">Adresse Email</label>
-                                        <input type="email" name="email" class="input-lg form-control" id="email" placeholder="Adresse Email">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="birthdate">Date</label>
-                                        <input type="date" class="input-lg form-control" name="birthdate" id="birthdate" placeholder="Date du Code Review">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="promotion">Promotion</label>
-                                        <select class="input-lg form-control" id="promotion" name="promotion">
-                                            <c:forEach items="${listPromotions}" var="promotion">
-                                                <option value="${promotion.id}">${promotion.name}</option>
-                                            </c:forEach>
-                                        </select>
-                                    </div>
-
-                                    <div class="text-right">
-                                        <button type="submit" class="btn btn-lg btn-primary">Enregistrer</button>
-                                    </div>
-                                </form>
+                                <table class="table table-striped table-bordered">
+                                    <thead class="thead-dark">
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Description</th>
+                                        <th>Date/Time</th>
+                                        <th>Promo ID</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>${codeReview.name}</td>
+                                        <td>${codeReview.description}</td>
+                                        <td>${codeReview.datetime}</td>
+                                        <td>${codeReview.promo_id}</td>
+                                        <td>
+                                            <a href="review/delete?id=${codeReview.id}" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Delete</a>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                         <!-- /.row -->

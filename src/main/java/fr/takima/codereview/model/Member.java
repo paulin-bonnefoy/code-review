@@ -7,14 +7,21 @@ public class Member {
     private String name;
     private String email;
     private java.time.LocalDate birthDate;
-    private  int id_promotion;
+    private Promotion promotion;
 
-    public Member(int id, String name, String email, LocalDate birthDate, int id_promotion) {
+    public Member(int id, String name, String email, LocalDate birthDate, Promotion promotion) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.birthDate = birthDate;
-        this.id_promotion = id_promotion;
+        this.promotion = promotion;
+    }
+
+    public Member(String name, String email, LocalDate birthDate, Promotion promotion) {
+        this.name = name;
+        this.email = email;
+        this.birthDate = birthDate;
+        this.promotion = promotion;
     }
 
     public int getId() {
@@ -49,12 +56,12 @@ public class Member {
         this.birthDate = birthDate;
     }
 
-    public int getId_promotion() {
-        return id_promotion;
+    public Promotion getPromotion() {
+        return promotion;
     }
 
-    public void setId_promotion(int id_promotion) {
-        this.id_promotion = id_promotion;
+    public void setPromotion(Promotion promotion) {
+        this.promotion = promotion;
     }
 
     @Override
