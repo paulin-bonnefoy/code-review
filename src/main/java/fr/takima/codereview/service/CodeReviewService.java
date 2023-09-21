@@ -8,7 +8,7 @@ import fr.takima.codereview.model.CodeReview;
 
 public class CodeReviewService {
 
-    private CodeReviewDao codeReviewDao = CodeReviewDao.getInstance();
+    private final CodeReviewDao codeReviewDao = CodeReviewDao.getInstance();
     private static CodeReviewService instance;
     public static CodeReviewService getInstance() {
         if (instance == null) {
@@ -17,10 +17,10 @@ public class CodeReviewService {
         return instance;
     }
 
-    public void create() throws ServiceException {
+    public void create(CodeReview codeReview) throws ServiceException {
 
         try{
-            codeReviewDao.create();
+            codeReviewDao.create(codeReview);
         }
         catch (DaoException e){
             throw new ServiceException(e);

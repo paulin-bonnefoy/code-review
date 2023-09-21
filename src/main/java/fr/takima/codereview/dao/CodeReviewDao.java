@@ -30,9 +30,8 @@ public class CodeReviewDao {
         return instance;
     }
 
-    public void create() throws DaoException {
+    public void create(CodeReview codeReview) throws DaoException {
         Connection connexion = null;
-        CodeReview codeReview = new CodeReview();
         try {
             connexion = ConnectionManager.getConnection();
 

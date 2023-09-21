@@ -1,3 +1,4 @@
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c"%>
 <%--
   Created by IntelliJ IDEA.
   User: takima
@@ -82,14 +83,19 @@
                                         <input type="text" class="input-lg form-control" id="name" placeholder="Nom">
                                     </div>
                                     <div class="form-group">
+                                        <label for="name">Nom</label>
+                                        <input type="textarea" class="input-lg form-control" id="description" placeholder="Nom">
+                                    </div>
+                                    <div class="form-group">
                                         <label for="date">Date</label>
-                                        <input type="datetime" class="input-lg form-control" id="date" placeholder="Date de l'évènement">
+                                        <input type="datetime" class="input-lg form-control" id="date" placeholder="Date du Code Review">
                                     </div>
                                     <div class="form-group">
                                         <label for="promotion">Promotion</label>
                                         <select class="input-lg form-control" id="promotion">
-                                            <option>Février</option>
-                                            <option>Mars</option>
+                                            <c:forEach items="${listPromotions}" var="promotion">
+                                                <option value="${promotion.id}">${promotion.name}</option>
+                                            </c:forEach>
                                         </select>
                                     </div>
 
