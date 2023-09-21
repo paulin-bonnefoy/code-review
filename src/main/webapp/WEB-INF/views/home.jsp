@@ -29,7 +29,9 @@
 
 <body>
 
-<div id="wrapper">
+<div id="wrapper">​
+219
+
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-static-top container-fluid" role="navigation" style="margin-bottom: 0; background-color: #edecec">
@@ -202,6 +204,7 @@
                     </div>
                     <div class="panel-body">
                         <table class="table table-striped">
+
                             <c:forEach var="code_review"  items="${requestScope['listCodeReviews']}" >
                                 <tr>
                                     <td>${code_review.id}</td>

@@ -16,6 +16,12 @@ public class CodeReview {
         this.datetime = datetime;
         this.promotion = promotion;
     }
+    public CodeReview() {
+        this.name = null;
+        this.description = null;
+        this.datetime = null;
+        this.promotion = null;
+    }
 
     public CodeReview(String name, String description, LocalDate datetime, Promotion promotion) {
         this.name = name;
