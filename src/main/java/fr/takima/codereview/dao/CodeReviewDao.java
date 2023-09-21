@@ -5,6 +5,7 @@ package fr.takima.codereview.dao;
         import fr.takima.codereview.exceptions.DaoException;
         import fr.takima.codereview.exceptions.ServiceException;
         import fr.takima.codereview.model.CodeReview;
+        import fr.takima.codereview.model.Promotion;
 
 
         import java.sql.*;
@@ -13,7 +14,7 @@ package fr.takima.codereview.dao;
         import java.util.List;
 public class CodeReviewDao {
 
-    private static final String CREATE_CODE_REVIEW_QUERY = "INSERT INTO codeReview(name, description, datetime, promo_promo_id) VALUES(?, ?, ?, ?);";
+    private static final String CREATE_CODE_REVIEW_QUERY = "INSERT INTO codeReview(name, description, datetime, promo_id) VALUES(?, ?, ?, ?);";
     private static final String DELETE_CODE_REVIEW_QUERY = "DELETE FROM codeReview WHERE id=? SET FOREIGN_KEY_CHECKS=0;";
     private static final String FIND_CODE_REVIEWS_QUERY = "SELECT name, description, datetime, promo_promo_id FROM codeReview;";
     public void create(CodeReview codeReview) throws DaoException {
@@ -25,8 +26,8 @@ public class CodeReviewDao {
 
             pstmt.setString(1, codeReview.getName());
             pstmt.setString(2, codeReview.getDescription());
-            pstmt.setString(3, Date.valueOf(codeReview.getDatetime()));
-            pstmt.setDate(4, codeReview.getPromo().getId());
+            pstmt.setString(3, String.valueOf(Date.valueOf(codeReview.getDatetime())));
+            pstmt.setLong(4, codeReview.getPromotion().getId());
 
             pstmt.executeUpdate();
 
@@ -62,18 +63,15 @@ public class CodeReviewDao {
 
             while (rs.next()) {
                 long id = rs.getLong("id");
-                String name = rs.getName("name");
-                String description = rs.getDescription("description");
+                String name = rs.getString("name");
+                String description = rs.getString("description");
                 LocalDate datetime = rs.getDate("debut").toLocalDate();
-                int promo_promo_id = CodeReview.getPromo().getId();
-
-                codeReviews.add(new CodeReview(id, name, description, datetime, promo_id));
+                //Promotion promotion = servicePromotion.findById(rs.getLong('id_promo'));
+                //codeReviews.add(new CodeReview(id, name, description, datetime, promotion));
             }
             return codeReviews;
         } catch (SQLException e) {
             e.printStackTrace();
-        } catch (ServiceException e) {
-            throw new RuntimeException(e);
         }
         return null;
     }

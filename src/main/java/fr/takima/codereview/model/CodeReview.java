@@ -49,12 +49,12 @@ public class CodeReview {
         this.datetime = datetime;
     }
 
-    public long getId_promotion() {
+    public Promotion getPromotion() {
         return promotion;
     }
 
-    public void setId_promotion(long promotion) {
-        this.promotion = id_promotion;
+    public void setPromotion(Promotion promotion) {
+        this.promotion = promotion;
     }
 
     @Override

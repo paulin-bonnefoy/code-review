@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68aa635b-65b2-4ba4-b6e6-8d6777923726" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/connection/ConnectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/connection/ConnectionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/dao/CodeReviewDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/dao/CodeReviewDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/model/CodeReview.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/model/CodeReview.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +141,7 @@
       <workItem from="1694696240617" duration="11000" />
       <workItem from="1694697262503" duration="1877000" />
       <workItem from="1694768882301" duration="1013000" />
-      <workItem from="1695281382102" duration="1431000" />
+      <workItem from="1695281382102" duration="3199000" />
     </task>
     <servers />
   </component>
