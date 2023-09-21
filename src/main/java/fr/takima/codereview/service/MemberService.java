@@ -6,6 +6,9 @@ import fr.takima.codereview.exceptions.DaoException;
 import fr.takima.codereview.exceptions.ServiceException;
 import fr.takima.codereview.model.Member;
 
+import java.util.List;
+
+
 public class MemberService {
 
     private MemberDao memberDao = MemberDao.getInstance();
@@ -51,6 +54,16 @@ public class MemberService {
         
         try{
             return (memberDao.findById(id));
+        }
+        catch (DaoException e){
+            throw new ServiceException(e);
+        }
+    }
+
+    public List<Member> findAll() throws ServiceException {
+
+        try{
+            return (memberDao.findAll());
         }
         catch (DaoException e){
             throw new ServiceException(e);

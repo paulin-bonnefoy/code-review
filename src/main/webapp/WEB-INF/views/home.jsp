@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: takima
-  Date: 14/09/2023
-  Time: 15:43
-  To change this template use File | Settings | File Templates.
---%>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="fr">
@@ -166,11 +160,11 @@
                                         </thead>
                                         <tbody>
 
-                                        <c:forEach var="member"  items="${requestScope['listMembers']}" >
+                                        <c:forEach items="${listMembers}" var="member">
                                             <tr>
                                                 <td>${member.name}</td>
                                                 <td>${member.email}</td>
-                                                <td>${member.promotion}</td>
+                                                <td>${member.promo_id}</td>
                                                 <td  class="text-right">
                                                     <a href="#" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Modifier</a>
                                                     <a href="#" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Supprimer</a>
@@ -232,14 +226,13 @@
                     <!-- /.panel-heading -->
                     <div class="panel-body">
                         <div class="list-group">
-                            <c:forEach var="promotion"  items="${requestScope['listPromotions']}" >
+                            <c:forEach items="${listPromotions}" var="promotion">
                                 <a href="#" class="list-group-item">
                                     <i class="fa fa-users fa-fw"></i> ${promotion.id}
                                     <span class="pull-right text-muted small"><em>${promotion.name}</em>
                                     </span>
                                 </a>
                             </c:forEach>
-
                         </div>
                         <!-- /.list-group -->
                         <a href="#" class="btn btn-default btn-block">Créer une nouvelle promotion</a>

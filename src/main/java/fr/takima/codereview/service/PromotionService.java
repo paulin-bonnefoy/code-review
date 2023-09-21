@@ -7,7 +7,8 @@ import fr.takima.codereview.exceptions.ServiceException;
 import fr.takima.codereview.model.Member;
 import fr.takima.codereview.model.Promotion;
 
-import java.util.ArrayList;
+
+
 import java.util.List;
 
 public class PromotionService {
@@ -60,6 +61,7 @@ public class PromotionService {
             throw new ServiceException(e);
         }
     }
+
     public List<Promotion> findAll() throws ServiceException {
 
         try{
