@@ -17,7 +17,7 @@ package fr.takima.codereview.dao;
 public class CodeReviewDao {
     public static CodeReviewDao instance;
     private static final String CREATE_CODE_REVIEW_QUERY = "INSERT INTO codeReview(name, description, datetime, promo_id) VALUES(?, ?, ?, ?);";
-    private static final String DELETE_CODE_REVIEW_QUERY = "DELETE FROM codeReview WHERE id=? SET FOREIGN_KEY_CHECKS=0;";
+    private static final String DELETE_CODE_REVIEW_QUERY = "DELETE FROM codeReview WHERE id=?;";
     private static final String FIND_CODE_REVIEWS_QUERY = "SELECT name, description, datetime, promo_id FROM codeReview;";
     private static final String FIND_CODE_REVIEW_QUERY = "SELECT name, description, datetime, promo_id FROM codeReview WHERE id=?;";
     private PromotionService promotionService;
@@ -90,7 +90,7 @@ public class CodeReviewDao {
     }
 
     public CodeReview findById(int id) throws DaoException {
-
+        this.promotionService = new PromotionService();
         try(Connection connection = ConnectionManager.getConnection();){
 
             PreparedStatement statement = connection.prepareStatement(FIND_CODE_REVIEW_QUERY);

@@ -251,7 +251,7 @@
                     <div class="panel-body">
                         <table class="table table-striped">
                             <tr>
-                                <td>Code review 1</td>
+                                <td><a href="${pageContext.request.contextPath}/review?id=1">Code review 1</a>/td>
                                 <td>Promo Février</td>
                                 <td class="text-right"><span class="text-muted small">24/02/2017</span></td>
                             </tr>
