@@ -64,7 +64,7 @@ public class MemberDao {
         }
     }
 
-    public void delete(long id) throws DaoException {
+    public void delete(int id) throws DaoException {
 
         try(Connection connection = ConnectionManager.getConnection();){
             PreparedStatement statement = connection.prepareStatement(DELETE_MEMBER_QUERY);
@@ -121,5 +121,4 @@ public class MemberDao {
             throw new DaoException(e);
         }
     }
-
 }
