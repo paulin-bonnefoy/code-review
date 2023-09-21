@@ -1,3 +1,4 @@
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c"%>
 <%--
   Created by IntelliJ IDEA.
   User: takima
@@ -15,7 +16,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>When Is My Code Review?</title>
+    <title>Code review n°${codeReview.id}</title>
 
     <!-- Bootstrap CSS -->
     <link href="./resources/css/bootstrap.min.css" rel="stylesheet">
@@ -76,27 +77,28 @@
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-xs-12">
-                                <form action="" method="post" class="">
-                                    <div class="form-group">
-                                        <label for="name">Nom</label>
-                                        <input type="text" class="input-lg form-control" id="name" placeholder="Nom">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="date">Date</label>
-                                        <input type="datetime" class="input-lg form-control" id="date" placeholder="Date de l'évènement">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="promotion">Promotion</label>
-                                        <select class="input-lg form-control" id="promotion">
-                                            <option>Février</option>
-                                            <option>Mars</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="text-right">
-                                        <button type="submit" class="btn btn-lg btn-primary">Enregistrer</button>
-                                    </div>
-                                </form>
+                                <table class="table table-striped table-bordered">
+                                    <thead class="thead-dark">
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Description</th>
+                                        <th>Date/Time</th>
+                                        <th>Promo ID</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>${codeReview.name}</td>
+                                        <td>${codeReview.description}</td>
+                                        <td>${codeReview.datetime}</td>
+                                        <td>${codeReview.promo_id}</td>
+                                        <td>
+                                            <a href="review/delete?id=${codeReview.id}" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Delete</a>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                         <!-- /.row -->

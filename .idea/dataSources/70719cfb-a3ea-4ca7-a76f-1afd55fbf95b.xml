@@ -1082,8 +1082,8 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="292" parent="1" name="mydb">
-      <IntrospectionTimestamp>2023-09-21.17:04:49</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2023-09-21.13:04:49</LocalIntrospectionTimestamp>
+      <IntrospectionTimestamp>2023-09-21.16:52:57</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2023-09-21.12:52:57</LocalIntrospectionTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <user id="293" parent="1" name="debian-sys-maint">

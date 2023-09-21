@@ -8,13 +8,14 @@ import fr.takima.codereview.model.Member;
 
 import java.util.List;
 
-public class MembreService {
+
+public class MemberService {
 
     private MemberDao memberDao = MemberDao.getInstance();
-    public static MembreService instance;
-    public static MembreService getInstance() {
+    public static MemberService instance;
+    public static MemberService getInstance() {
         if (instance == null) {
-            instance = new MembreService();
+            instance = new MemberService();
         }
         return instance;
     }
