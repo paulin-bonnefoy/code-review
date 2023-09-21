@@ -27,5 +27,7 @@ public class main {
         promotionService.create(P2024);
         System.out.println(promotionService.findById(3));
         promotionService.delete(4);
+
+        System.out.println(promotionService.findAll());
     }
 }

@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68aa635b-65b2-4ba4-b6e6-8d6777923726" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/img/codereview_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/img/member.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/img/member_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/img/promotion_icon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/dao/PromotionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/dao/PromotionDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/main/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/main/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/service/PromotionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/service/PromotionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/servlet/HomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/servlet/HomeServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/members/details.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/members/details.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/promotions/details.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/promotions/details.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +28,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="members" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -65,7 +63,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "database.data.extractors.current.export.id": "Comma-separated (CSV)_id",
-    "git-widget-placeholder": "front",
+    "git-widget-placeholder": "listepromo",
     "last_opened_file_path": "/home/takima/Bureau/code-review/DBJar/mysql-connector-java-8.1.0.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",

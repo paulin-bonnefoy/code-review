@@ -5,6 +5,8 @@ import fr.takima.codereview.exceptions.DaoException;
 import fr.takima.codereview.model.Promotion;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class PromotionDao {
     private static PromotionDao instance = null;
@@ -19,6 +21,7 @@ public class PromotionDao {
     private static final String CREATE_PROMOTION_QUERY = "INSERT INTO promo(name) VALUES (?);";
     private static final String DELETE_PROMOTION_QUERY = "DELETE FROM promo WHERE id=?;";
     private static final String FIND_PROMOTION_QUERY = "SELECT id, name FROM promo WHERE id=?;";
+    private static final String FIND_PROMOTIONS_QUERY = "SELECT id, name FROM promo;";
     private static final String MODIFY_PROMOTION_QUERY = "UPDATE promo SET name=? WHERE id=?;";
     private static final String COUNT_PROMOTION_QUERY = "SELECT COUNT(*) AS total FROM promo;";
 
@@ -69,6 +72,31 @@ public class PromotionDao {
 
             rs.close();
             return new Promotion(id, name);
+        }
+        catch (SQLException e){
+            e.printStackTrace();
+            throw new DaoException(e);
+        }
+    }
+
+    public List<Promotion> findAll() throws DaoException {
+
+        List<Promotion> promotions = new ArrayList<Promotion>();
+
+        try(Connection connection = ConnectionManager.getConnection();){
+
+            Statement statement = connection.createStatement();
+            ResultSet rs = statement.executeQuery(FIND_PROMOTIONS_QUERY);
+
+            while(rs.next()){
+                int id = rs.getInt("id");
+                String name = rs.getString("name");
+
+                Promotion promotion = new Promotion(id, name);
+                promotions.add(promotion);
+            }
+
+            return promotions;
         }
         catch (SQLException e){
             e.printStackTrace();

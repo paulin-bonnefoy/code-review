@@ -7,6 +7,8 @@ import fr.takima.codereview.exceptions.ServiceException;
 import fr.takima.codereview.model.Member;
 import fr.takima.codereview.model.Promotion;
 
+import java.util.List;
+
 public class PromotionService {
 
     private PromotionDao promotionDao = PromotionDao.getInstance();
@@ -52,6 +54,16 @@ public class PromotionService {
 
         try{
             return (promotionDao.findById(id));
+        }
+        catch (DaoException e){
+            throw new ServiceException(e);
+        }
+    }
+
+    public List<Promotion> findAll() throws ServiceException {
+
+        try{
+            return (promotionDao.findAll());
         }
         catch (DaoException e){
             throw new ServiceException(e);
