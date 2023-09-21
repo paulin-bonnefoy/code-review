@@ -6,13 +6,13 @@ import fr.takima.codereview.exceptions.DaoException;
 import fr.takima.codereview.exceptions.ServiceException;
 import fr.takima.codereview.model.Member;
 
-public class MembreService {
+public class MemberService {
 
     private MemberDao memberDao = MemberDao.getInstance();
-    public static MembreService instance;
-    public static MembreService getInstance() {
+    public static MemberService instance;
+    public static MemberService getInstance() {
         if (instance == null) {
-            instance = new MembreService();
+            instance = new MemberService();
         }
         return instance;
     }

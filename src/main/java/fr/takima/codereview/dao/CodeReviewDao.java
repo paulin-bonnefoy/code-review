@@ -5,7 +5,9 @@ package fr.takima.codereview.dao;
         import fr.takima.codereview.exceptions.DaoException;
         import fr.takima.codereview.exceptions.ServiceException;
         import fr.takima.codereview.model.CodeReview;
+        import fr.takima.codereview.model.CodeReview;
         import fr.takima.codereview.model.Promotion;
+        import fr.takima.codereview.service.PromotionService;
 
 
         import java.sql.*;
@@ -13,12 +15,24 @@ package fr.takima.codereview.dao;
         import java.util.ArrayList;
         import java.util.List;
 public class CodeReviewDao {
-
+    public static CodeReviewDao instance;
     private static final String CREATE_CODE_REVIEW_QUERY = "INSERT INTO codeReview(name, description, datetime, promo_id) VALUES(?, ?, ?, ?);";
     private static final String DELETE_CODE_REVIEW_QUERY = "DELETE FROM codeReview WHERE id=? SET FOREIGN_KEY_CHECKS=0;";
-    private static final String FIND_CODE_REVIEWS_QUERY = "SELECT name, description, datetime, promo_promo_id FROM codeReview;";
-    public void create(CodeReview codeReview) throws DaoException {
+    private static final String FIND_CODE_REVIEWS_QUERY = "SELECT name, description, datetime, promo_id FROM codeReview;";
+    private static final String FIND_CODE_REVIEW_QUERY = "SELECT name, description, datetime, promo_id FROM codeReview WHERE id=?;";
+    private PromotionService promotionService;
+
+
+    public static CodeReviewDao getInstance() {
+        if (instance == null) {
+            instance = new CodeReviewDao();
+        }
+        return instance;
+    }
+
+    public void create() throws DaoException {
         Connection connexion = null;
+        CodeReview codeReview = new CodeReview();
         try {
             connexion = ConnectionManager.getConnection();
 
@@ -38,12 +52,11 @@ public class CodeReviewDao {
 
     }
 
-    public void delete(CodeReview codeReview) throws DaoException {
+    public void delete(int id) throws DaoException {
         try {
             Connection connexion = ConnectionManager.getConnection();
             PreparedStatement pstmt = connexion.prepareStatement(DELETE_CODE_REVIEW_QUERY);
-
-            pstmt.setLong(1, codeReview.getId());
+            pstmt.setLong(1, id);
             pstmt.executeUpdate();
 
         } catch (SQLException e) {
@@ -64,15 +77,42 @@ public class CodeReviewDao {
             while (rs.next()) {
                 long id = rs.getLong("id");
                 String name = rs.getString("name");
-                String description = rs.getString("description");
-                LocalDate datetime = rs.getDate("debut").toLocalDate();
-                //Promotion promotion = servicePromotion.findById(rs.getLong('id_promo'));
-                //codeReviews.add(new CodeReview(id, name, description, datetime, promotion));
+                String email = rs.getString("description");
+                LocalDate birthdate = rs.getDate("datetime").toLocalDate();
+                Promotion promotion = promotionService.findById(rs.getInt("promo_id"));
             }
             return codeReviews;
         } catch (SQLException e) {
             e.printStackTrace();
+        } catch (ServiceException e) {
+            throw new RuntimeException(e);
         }
         return null;
+    }
+
+    public CodeReview findById(int id) throws DaoException {
+
+        try(Connection connection = ConnectionManager.getConnection();){
+
+            PreparedStatement statement = connection.prepareStatement(FIND_CODE_REVIEW_QUERY);
+            statement.setLong(1, id);
+            ResultSet rs = statement.executeQuery();
+
+            rs.next();
+            String name = rs.getString("name");
+            String email = rs.getString("description");
+            LocalDate birthdate = rs.getDate("datetime").toLocalDate();
+            Promotion promotion = promotionService.findById(rs.getInt("promo_id"));
+
+
+            rs.close();
+            return new CodeReview(id, name, email, birthdate, promotion);
+        }
+        catch (SQLException e){
+            e.printStackTrace();
+            throw new DaoException(e);
+        } catch (ServiceException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
