@@ -1,69 +1,69 @@
 package fr.takima.codereview.service;
 
 
-import fr.takima.codereview.dao.MemberDao;
+import fr.takima.codereview.dao.CodeReviewDao;
 import fr.takima.codereview.exceptions.DaoException;
 import fr.takima.codereview.exceptions.ServiceException;
-import fr.takima.codereview.model.Member;
+import fr.takima.codereview.model.CodeReview;
 
-public class MembreService {
+public class CodeReviewService {
 
-    private MemberDao memberDao = MemberDao.getInstance();
-    public static MembreService instance;
-    public static MembreService getInstance() {
+    private final CodeReviewDao codeReviewDao = CodeReviewDao.getInstance();
+    private static CodeReviewService instance;
+    public static CodeReviewService getInstance() {
         if (instance == null) {
-            instance = new MembreService();
+            instance = new CodeReviewService();
         }
         return instance;
     }
 
-    public void create(Member member) throws ServiceException {
+    public void create(CodeReview codeReview) throws ServiceException {
 
         try{
-            memberDao.create(member);
+            codeReviewDao.create(codeReview);
         }
         catch (DaoException e){
             throw new ServiceException(e);
         }
     }
-
-    public void modify(Member member) throws ServiceException {
+    /*
+    public void modify(CodeReview codeReview) throws ServiceException {
 
         try{
-            memberDao.modify(member);
+            codeReviewDao.modify(codeReview);
         }
         catch (DaoException e){
             throw new ServiceException(e);
         }
-    }
+    }*/
 
     public void delete(int id) throws ServiceException {
 
         try{
-            memberDao.delete(id);
+            codeReviewDao.delete(id);
         }
         catch (DaoException e){
             throw new ServiceException(e);
         }
     }
 
-    public Member findById(int id) throws ServiceException {
-        
+    public CodeReview findById(int id) throws ServiceException {
+
         try{
-            return (memberDao.findById(id));
+            return (codeReviewDao.findById(id));
         }
         catch (DaoException e){
             throw new ServiceException(e);
         }
     }
-
+    /*
     public int getCount() throws ServiceException {
 
         try{
-            return (memberDao.getCount());
+            return (codeReviewDao.getCount());
         }
         catch (DaoException e){
             throw new ServiceException(e);
         }
-    }
+    }*/
 }

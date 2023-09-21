@@ -1119,8 +1119,10 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="292" parent="1" name="mydb">
+
       <IntrospectionTimestamp>2023-09-15.19:56:04</IntrospectionTimestamp>
       <LocalIntrospectionTimestamp>2023-09-15.15:56:04</LocalIntrospectionTimestamp>
+
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <user id="293" parent="1" name="abourliatoux">

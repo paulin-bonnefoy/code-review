@@ -1,41 +1,39 @@
 package fr.takima.codereview.service;
 
+
 import fr.takima.codereview.dao.MemberDao;
-import fr.takima.codereview.dao.PromotionDao;
 import fr.takima.codereview.exceptions.DaoException;
 import fr.takima.codereview.exceptions.ServiceException;
 import fr.takima.codereview.model.Member;
-import fr.takima.codereview.model.Promotion;
-
-
 
 import java.util.List;
 
-public class PromotionService {
 
-    private PromotionDao promotionDao = PromotionDao.getInstance();
-    public static PromotionService instance;
-    public static PromotionService getInstance() {
+public class MemberService {
+
+    private MemberDao memberDao = MemberDao.getInstance();
+    public static MemberService instance;
+    public static MemberService getInstance() {
         if (instance == null) {
-            instance = new PromotionService();
+            instance = new MemberService();
         }
         return instance;
     }
 
-    public void create(Promotion promotion) throws ServiceException {
+    public void create(Member member) throws ServiceException {
 
         try{
-            promotionDao.create(promotion);
+            memberDao.create(member);
         }
         catch (DaoException e){
             throw new ServiceException(e);
         }
     }
 
-    public void modify(Promotion promotion) throws ServiceException {
+    public void modify(Member member) throws ServiceException {
 
         try{
-            promotionDao.modify(promotion);
+            memberDao.modify(member);
         }
         catch (DaoException e){
             throw new ServiceException(e);
@@ -45,27 +43,27 @@ public class PromotionService {
     public void delete(int id) throws ServiceException {
 
         try{
-            promotionDao.delete(id);
+            memberDao.delete(id);
         }
         catch (DaoException e){
             throw new ServiceException(e);
         }
     }
 
-    public Promotion findById(int id) throws ServiceException {
-
+    public Member findById(int id) throws ServiceException {
+        
         try{
-            return (promotionDao.findById(id));
+            return (memberDao.findById(id));
         }
         catch (DaoException e){
             throw new ServiceException(e);
         }
     }
 
-    public List<Promotion> findAll() throws ServiceException {
+    public List<Member> findAll() throws ServiceException {
 
         try{
-            return (promotionDao.findAll());
+            return (memberDao.findAll());
         }
         catch (DaoException e){
             throw new ServiceException(e);
@@ -75,11 +73,10 @@ public class PromotionService {
     public int getCount() throws ServiceException {
 
         try{
-            return (promotionDao.getCount());
+            return (memberDao.getCount());
         }
         catch (DaoException e){
             throw new ServiceException(e);
         }
     }
-
 }
