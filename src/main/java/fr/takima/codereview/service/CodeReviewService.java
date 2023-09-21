@@ -6,6 +6,8 @@ import fr.takima.codereview.exceptions.DaoException;
 import fr.takima.codereview.exceptions.ServiceException;
 import fr.takima.codereview.model.CodeReview;
 
+import java.util.List;
+
 public class CodeReviewService {
 
     private final CodeReviewDao codeReviewDao = CodeReviewDao.getInstance();
@@ -51,6 +53,15 @@ public class CodeReviewService {
 
         try{
             return (codeReviewDao.findById(id));
+        }
+        catch (DaoException e){
+            throw new ServiceException(e);
+        }
+    }
+    public List<CodeReview> findAll() throws ServiceException {
+
+        try{
+            return (codeReviewDao.findAll());
         }
         catch (DaoException e){
             throw new ServiceException(e);

@@ -2,8 +2,10 @@ package fr.takima.codereview.dao;
 
 import fr.takima.codereview.connection.ConnectionManager;
 import fr.takima.codereview.exceptions.DaoException;
+import fr.takima.codereview.exceptions.ServiceException;
 import fr.takima.codereview.model.Member;
 import fr.takima.codereview.model.Promotion;
+import fr.takima.codereview.service.PromotionService;
 
 import java.sql.*;
 import java.time.LocalDate;
@@ -13,12 +15,13 @@ import java.util.List;
 public class MemberDao {
 
     public static MemberDao instance;
+    private PromotionService promotionService = PromotionService.getInstance();
 
     private static final String CREATE_MEMBER_QUERY = "INSERT INTO member(name, email, birthdate, promo_id) VALUES(?, ?, ?, ?);";
     private static final String MODIFY_MEMBER_QUERY = "UPDATE member SET name=?, email=?, birthdate=?, promo_id=? WHERE id=?;";
     private static final String DELETE_MEMBER_QUERY = "DELETE FROM member WHERE id=?;";
     private static final String FIND_MEMBER_QUERY = "SELECT name, email, birthdate, promo_id FROM member WHERE id=?;";
-    private static final String FIND_MEMBERS_QUERY = "SELECT id, name, email, birthdate, promo_id FROM member;";
+    private static final String FIND_MEMBERS_QUERY = "SELECT id, name, email, birthdate, promo_id FROM member ORDER BY name ASC;";
     private static final String COUNT_MEMBER_QUERY = "SELECT COUNT(*) AS total FROM member;";
 
     public static MemberDao getInstance() {
@@ -37,8 +40,7 @@ public class MemberDao {
             statement.setString(1, member.getName());
             statement.setString(2, member.getEmail());
             statement.setDate(3, Date.valueOf(member.getBirthDate()));
-            statement.setInt(4, member.getId());
-            statement.setInt(5, member.getId_promotion());
+            statement.setInt(4, member.getPromotion().getId());
 
             statement.execute();
         }
@@ -57,8 +59,7 @@ public class MemberDao {
             statement.setString(1, member.getName());
             statement.setString(2, member.getEmail());
             statement.setDate(3, Date.valueOf(member.getBirthDate()));
-            statement.setInt(4, member.getId());
-            statement.setInt(5, member.getId_promotion());
+            statement.setInt(4, member.getPromotion().getId());
 
             statement.execute();
         }
@@ -97,7 +98,7 @@ public class MemberDao {
             String name = rs.getString("name");
             String email = rs.getString("email");
             LocalDate birthdate = rs.getDate("birthdate").toLocalDate();
-            int promo_id = rs.getInt("promo_id");
+            Promotion promo_id = promotionService.findById(rs.getInt("promo_id"));
 
             rs.close();
             return new Member(id, name, email, birthdate, promo_id);
@@ -105,6 +106,8 @@ public class MemberDao {
         catch (SQLException e){
             e.printStackTrace();
             throw new DaoException(e);
+        } catch (ServiceException e) {
+            throw new RuntimeException(e);
         }
     }
 
@@ -122,7 +125,7 @@ public class MemberDao {
                 String name = rs.getString("name");
                 String email = rs.getString("email");
                 LocalDate birthdate = rs.getDate("birthdate").toLocalDate();
-                int promo_id = rs.getInt("promo_id");
+                Promotion promo_id = promotionService.findById(rs.getInt("promo_id"));
 
                 Member member = new Member(id, name, email, birthdate, promo_id);
                 members.add(member);
@@ -133,6 +136,8 @@ public class MemberDao {
         catch (SQLException e){
             e.printStackTrace();
             throw new DaoException(e);
+        } catch (ServiceException e) {
+            throw new RuntimeException(e);
         }
     }
 

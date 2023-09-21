@@ -1,3 +1,4 @@
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="fr">
@@ -73,20 +74,25 @@
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-xs-12">
-                                <form action="" method="post" class="">
+                                <form action="members" method="post" class="">
                                     <div class="form-group">
                                         <label for="name">Nom</label>
-                                        <input type="text" class="input-lg form-control" id="name" placeholder="Nom">
+                                        <input type="text" name="name" class="input-lg form-control" id="name" placeholder="Nom">
                                     </div>
                                     <div class="form-group">
                                         <label for="email">Adresse Email</label>
-                                        <input type="email" class="input-lg form-control" id="email" placeholder="Adresse Email">
+                                        <input type="email" name="email" class="input-lg form-control" id="email" placeholder="Adresse Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="birthdate">Date</label>
+                                        <input type="date" class="input-lg form-control" name="birthdate" id="birthdate" placeholder="Date du Code Review">
                                     </div>
                                     <div class="form-group">
                                         <label for="promotion">Promotion</label>
-                                        <select class="input-lg form-control" id="promotion">
-                                            <option>Février</option>
-                                            <option>Mars</option>
+                                        <select class="input-lg form-control" id="promotion" name="promotion">
+                                            <c:forEach items="${listPromotions}" var="promotion">
+                                                <option value="${promotion.id}">${promotion.name}</option>
+                                            </c:forEach>
                                         </select>
                                     </div>
 
