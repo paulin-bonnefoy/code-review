@@ -25,7 +25,7 @@
 <div id="wrapper">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-static-top container-fluid" role="navigation" style="margin-bottom: 0">
+    <nav class="navbar navbar-default navbar-static-top container-fluid" role="navigation" style="margin-bottom: 0; background-color: #edecec">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -33,7 +33,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">When Is My Code Review?</a>
+            <a href="home"><img src="./resources/img/MyCodeReview.png" class="logo" alt=""  style="max-width: 200px"></a>
+
         </div>
         <!-- /.navbar-header -->
 
@@ -57,7 +58,7 @@
     <div id="page-wrapper" class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Ajouter un membre</h1>
+                <h1 class="page-header" style="display: flex; justify-content: center">Ajouter un membre</h1>
             </div>
             <!-- /.col-lg-12 -->
         </div>
@@ -109,7 +110,8 @@
 <footer class="footer">
     <div class="container">
         <div class="row text-center">
-            <img src="./resources/img/ebusiness.png" class="logo" alt=""> &bullet; 2017
+            <img src="./resources/img/logo_takima_horizontal.png" class="logo" alt="">
+            <h4>2023</h4>
         </div>
     </div>
 </footer>
