@@ -1,11 +1,5 @@
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c"%>
-<%--
-  Created by IntelliJ IDEA.
-  User: takima
-  Date: 15/09/2023
-  Time: 17:51
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="fr">
@@ -33,7 +27,7 @@
 <div id="wrapper">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-static-top container-fluid" role="navigation" style="margin-bottom: 0">
+    <nav class="navbar navbar-default navbar-static-top container-fluid" role="navigation" style="margin-bottom: 0; background-color: #edecec">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -41,7 +35,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">When Is My Code Review?</a>
+            <a href="home"><img src="./resources/img/MyCodeReview.png" class="logo" alt=""  style="max-width: 200px"></a>
+
         </div>
         <!-- /.navbar-header -->
 
@@ -118,7 +113,8 @@
 <footer class="footer">
     <div class="container">
         <div class="row text-center">
-            <img src="./resources/img/ebusiness.png" class="logo" alt=""> &bullet; 2017
+            <img src="./resources/img/logo_takima_horizontal.png" class="logo" alt="">
+            <h4>2023</h4>
         </div>
     </div>
 </footer>

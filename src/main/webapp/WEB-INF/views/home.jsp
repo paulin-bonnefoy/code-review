@@ -23,8 +23,7 @@
 
 <body>
 
-<div id="wrapper">​
-219
+<div id="wrapper">
 
 
     <!-- Navigation -->
@@ -50,7 +49,7 @@
                     </li>
                     <li><a href="members"><i class="fa fa-user fa-fw"></i> Ajouter un membre</a>
                     </li>
-                    <li><a href="codereviews"><i class="fa fa-calendar fa-fw"></i> Créer un rendez-vous</a>
+                    <li><a href="add_review"><i class="fa fa-calendar fa-fw"></i> Créer un rendez-vous</a>
                     </li>
                 </ul>
             </li>
@@ -123,10 +122,12 @@
                             <div class="col-xs-9 text-right">
                                 <div class="huge">3</div>
                                 <div class="huge-label">Code reviews programmées</div>
+
                             </div>
                         </div>
                     </div>
-                    <a href="codereviews">
+
+                    <a href="add_review">
                         <div class="panel-footer">
                             <span class="pull-left">Ajouter une code review</span>
                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -199,21 +200,21 @@
                     <div class="panel-body">
                         <table class="table table-striped">
 
-                            <c:forEach var="code_review"  items="${requestScope['listCodeReviews']}" >
+                            <c:forEach var="review"  items="${listCodeReviews}" >
                                 <tr>
-                                    <td>${code_review.id}</td>
-                                    <td>${code_review.promotion.name}</td>
-                                    <td>${code_review.datetime}</td>
+                                    <td>${review.id}</td>
+                                    <td>${review.promotion.name}</td>
+                                    <td>${review.datetime}</td>
 
                                     <td  class="text-right">
-                                        <a href="#" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Modifier</a>
-                                        <a href="#" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Supprimer</a>
+                                        <a href="review?id=${review.id}" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Modifier</a>
+                                        <a href="review/delete?id=${review.id}" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Supprimer</a>
                                     </td>
                                 </tr>
                             </c:forEach>
 
                         </table>
-                        <a href="#" class="btn btn-default btn-block">Programmer une code review</a>
+                        <a href="add_review" class="btn btn-default btn-block">Programmer une code review</a>
                     </div>
                     <!-- /.panel-body -->
                 </div>
@@ -235,7 +236,7 @@
                             </c:forEach>
                         </div>
                         <!-- /.list-group -->
-                        <a href="#" class="btn btn-default btn-block">Créer une nouvelle promotion</a>
+                        <a href="promotions" class="btn btn-default btn-block">Créer une nouvelle promotion</a>
                     </div>
                     <!-- /.panel-body -->
                 </div>

@@ -6,6 +6,7 @@ package fr.takima.codereview.dao;
         import fr.takima.codereview.exceptions.ServiceException;
         import fr.takima.codereview.model.CodeReview;
         import fr.takima.codereview.model.CodeReview;
+        import fr.takima.codereview.model.Member;
         import fr.takima.codereview.model.Promotion;
         import fr.takima.codereview.service.PromotionService;
 
@@ -18,9 +19,10 @@ public class CodeReviewDao {
     public static CodeReviewDao instance;
     private static final String CREATE_CODE_REVIEW_QUERY = "INSERT INTO codeReview(name, description, datetime, promo_id) VALUES(?, ?, ?, ?);";
     private static final String DELETE_CODE_REVIEW_QUERY = "DELETE FROM codeReview WHERE id=?;";
-    private static final String FIND_CODE_REVIEWS_QUERY = "SELECT name, description, datetime, promo_id FROM codeReview;";
+    private static final String FIND_CODE_REVIEWS_QUERY = "SELECT * FROM codeReview ORDER BY id DESC;";
+
     private static final String FIND_CODE_REVIEW_QUERY = "SELECT name, description, datetime, promo_id FROM codeReview WHERE id=?;";
-    private PromotionService promotionService;
+    private PromotionService promotionService = PromotionService.getInstance();
 
 
     public static CodeReviewDao getInstance() {
@@ -64,6 +66,7 @@ public class CodeReviewDao {
     }
 
     public List<CodeReview> findAll() throws DaoException {
+
         try {
             Connection connection = ConnectionManager.getConnection();
 
@@ -74,11 +77,14 @@ public class CodeReviewDao {
             List<CodeReview> codeReviews = new ArrayList<>();
 
             while (rs.next()) {
-                long id = rs.getLong("id");
+                long id = rs.getInt("id");
                 String name = rs.getString("name");
-                String email = rs.getString("description");
-                LocalDate birthdate = rs.getDate("datetime").toLocalDate();
+                String description = rs.getString("description");
+                LocalDate datetime = rs.getDate("datetime").toLocalDate();
                 Promotion promotion = promotionService.findById(rs.getInt("promo_id"));
+
+                CodeReview codeReview = new CodeReview(id, name, description, datetime, promotion);
+                codeReviews.add(codeReview);
             }
             return codeReviews;
         } catch (SQLException e) {
