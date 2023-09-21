@@ -5,18 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68aa635b-65b2-4ba4-b6e6-8d6777923726" name="Changes" comment="">
-<<<<<<< HEAD
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/exceptions/DaoException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/exceptions/ServiceException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/exceptions/ValideException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-=======
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/70719cfb-a3ea-4ca7-a76f-1afd55fbf95b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/70719cfb-a3ea-4ca7-a76f-1afd55fbf95b.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/70719cfb-a3ea-4ca7-a76f-1afd55fbf95b/storage_v2/_src_/schema/CodeReviewDB.A7Ogcg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/70719cfb-a3ea-4ca7-a76f-1afd55fbf95b/storage_v2/_src_/schema/CodeReviewDB.A7Ogcg.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/70719cfb-a3ea-4ca7-a76f-1afd55fbf95b/storage_v2/_src_/schema/mydb.Kl8zAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/70719cfb-a3ea-4ca7-a76f-1afd55fbf95b/storage_v2/_src_/schema/mydb.Kl8zAA.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DBModel.sql" beforeDir="false" afterPath="$PROJECT_DIR$/DBModel.sql" afterDir="false" />
->>>>>>> sqlAurel
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,26 +51,6 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-<<<<<<< HEAD
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "exceptions",
-    "last_opened_file_path": "/home/takima/Documents/code-review/src/main/java/fr/takima/codereview/servlet",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "vue.rearranger.settings.migration": "true"
-=======
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
@@ -105,7 +78,6 @@
     &quot;DatabaseDriversLRU&quot;: [
       &quot;mysql&quot;
     ]
->>>>>>> sqlAurel
   }
 }</component>
   <component name="RecentsManager">
