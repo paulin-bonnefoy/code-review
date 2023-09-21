@@ -17,6 +17,13 @@ public class CodeReview {
         this.promotion = promotion;
     }
 
+    public CodeReview(String name, String description, LocalDate datetime, Promotion promotion) {
+        this.name = name;
+        this.description = description;
+        this.datetime = datetime;
+        this.promotion = promotion;
+    }
+
     public long getId() {
         return id;
     }

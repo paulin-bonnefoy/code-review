@@ -16,10 +16,10 @@ public class PromotionDao {
         return instance;
     }
 
-    private static final String CREATE_PROMOTION_QUERY = "INSERT INTO promo(promo_id, name) VALUES (?,?);";
-    private static final String DELETE_PROMOTION_QUERY = "DELETE FROM promo WHERE promo_id=?;";
-    private static final String FIND_PROMOTION_QUERY = "SELECT name FROM promo WHERE promo_id=?;";
-    private static final String MODIFY_PROMOTION_QUERY = "UPDATE promo SET name=? WHERE promo_id=?;";
+    private static final String CREATE_PROMOTION_QUERY = "INSERT INTO promo(name) VALUES (?);";
+    private static final String DELETE_PROMOTION_QUERY = "DELETE FROM promo WHERE id=?;";
+    private static final String FIND_PROMOTION_QUERY = "SELECT id, name FROM promo WHERE id=?;";
+    private static final String MODIFY_PROMOTION_QUERY = "UPDATE promo SET name=? WHERE id=?;";
     private static final String COUNT_PROMOTION_QUERY = "SELECT COUNT(*) AS total FROM promo;";
 
 
@@ -32,8 +32,7 @@ public class PromotionDao {
 
             PreparedStatement statement = connection.prepareStatement(CREATE_PROMOTION_QUERY);
 
-            statement.setInt(1, promo.getId());
-            statement.setString(2, promo.getName());
+            statement.setString(1, promo.getName());
 
             statement.executeUpdate();
 
