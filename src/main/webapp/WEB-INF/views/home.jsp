@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: takima
-  Date: 14/09/2023
-  Time: 15:43
-  To change this template use File | Settings | File Templates.
---%>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="fr">
@@ -164,7 +158,7 @@
                                         </thead>
                                         <tbody>
 
-                                        <c:forEach var="member"  items="${requestScope['listMembers']}" >
+                                        <c:forEach items="${listMembers}" var="member">
                                             <tr>
                                                 <td>${member.name}</td>
                                                 <td>${member.email}</td>

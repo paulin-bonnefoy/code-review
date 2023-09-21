@@ -28,6 +28,6 @@ public class main {
         System.out.println(promotionService.findById(3));
         promotionService.delete(4);
 
-        System.out.println(promotionService.findAll());
+        System.out.println(membreService.findAll());
     }
 }

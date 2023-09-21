@@ -21,7 +21,7 @@ public class PromotionDao {
     private static final String CREATE_PROMOTION_QUERY = "INSERT INTO promo(name) VALUES (?);";
     private static final String DELETE_PROMOTION_QUERY = "DELETE FROM promo WHERE id=?;";
     private static final String FIND_PROMOTION_QUERY = "SELECT id, name FROM promo WHERE id=?;";
-    private static final String FIND_PROMOTIONS_QUERY = "SELECT id, name FROM promo;";
+    private static final String FIND_PROMOTIONS_QUERY = "SELECT id, name FROM promo ORDER BY id DESC;";
     private static final String MODIFY_PROMOTION_QUERY = "UPDATE promo SET name=? WHERE id=?;";
     private static final String COUNT_PROMOTION_QUERY = "SELECT COUNT(*) AS total FROM promo;";
 
