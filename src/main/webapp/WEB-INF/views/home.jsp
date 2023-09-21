@@ -79,7 +79,7 @@
                                 <img src="./resources/img/promotion_icon.png" style="max-height: 80px">
                             </div>
                             <div class="col-xs-9 text-right">
-                                <div class="huge">4</div>
+                                <div class="huge">${promotionsCount}</div>
                                 <div class="huge-label">Promotions</div>
                             </div>
                         </div>
@@ -102,7 +102,7 @@
                                 <img src="./resources/img/member_icon.png" style="max-height: 80px">
                             </div>
                             <div class="col-xs-9 text-right">
-                                <div class="huge">46</div>
+                                <div class="huge">${membersCount}</div>
                                 <div class="huge-label">Membres inscrits</div>
                             </div>
                         </div>

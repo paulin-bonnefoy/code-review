@@ -24,6 +24,13 @@ public class Member {
         this.id_promotion = id_promotion;
     }
 
+    public Member(String name, String email, int id_promotion) {
+        this.name = name;
+        this.email = email;
+        this.birthDate = birthDate;
+        this.id_promotion = id_promotion;
+    }
+
     public int getId() {
         return id;
     }
