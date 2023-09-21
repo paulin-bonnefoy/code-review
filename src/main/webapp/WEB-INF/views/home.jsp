@@ -168,7 +168,7 @@
                                             <tr>
                                                 <td>${member.name}</td>
                                                 <td>${member.email}</td>
-                                                <td>${member.promotion}</td>
+                                                <td>${member.promo_id}</td>
                                                 <td  class="text-right">
                                                     <a href="#" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Modifier</a>
                                                     <a href="#" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Supprimer</a>

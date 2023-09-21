@@ -3,9 +3,12 @@ package fr.takima.codereview.dao;
 import fr.takima.codereview.connection.ConnectionManager;
 import fr.takima.codereview.exceptions.DaoException;
 import fr.takima.codereview.model.Member;
+import fr.takima.codereview.model.Promotion;
 
 import java.sql.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MemberDao {
 
@@ -15,6 +18,7 @@ public class MemberDao {
     private static final String MODIFY_MEMBER_QUERY = "UPDATE member SET name=?, email=?, birthdate=?, promo_id=? WHERE id=?;";
     private static final String DELETE_MEMBER_QUERY = "DELETE FROM member WHERE id=?;";
     private static final String FIND_MEMBER_QUERY = "SELECT name, email, birthdate, promo_id FROM member WHERE id=?;";
+    private static final String FIND_MEMBERS_QUERY = "SELECT id, name, email, birthdate, promo_id FROM member;";
     private static final String COUNT_MEMBER_QUERY = "SELECT COUNT(*) AS total FROM member;";
 
     public static MemberDao getInstance() {
@@ -97,6 +101,34 @@ public class MemberDao {
 
             rs.close();
             return new Member(id, name, email, birthdate, promo_id);
+        }
+        catch (SQLException e){
+            e.printStackTrace();
+            throw new DaoException(e);
+        }
+    }
+
+    public List<Member> findAll() throws DaoException {
+
+        List<Member> members = new ArrayList<Member>();
+
+        try(Connection connection = ConnectionManager.getConnection();){
+
+            Statement statement = connection.createStatement();
+            ResultSet rs = statement.executeQuery(FIND_MEMBERS_QUERY);
+
+            while(rs.next()){
+                int id = rs.getInt("id");
+                String name = rs.getString("name");
+                String email = rs.getString("email");
+                LocalDate birthdate = rs.getDate("birthdate").toLocalDate();
+                int promo_id = rs.getInt("promo_id");
+
+                Member member = new Member(id, name, email, birthdate, promo_id);
+                members.add(member);
+            }
+
+            return members;
         }
         catch (SQLException e){
             e.printStackTrace();
