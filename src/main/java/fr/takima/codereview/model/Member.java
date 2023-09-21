@@ -7,7 +7,7 @@ public class Member {
     private String name;
     private String email;
     private java.time.LocalDate birthDate;
-    private  int id_promotion;
+    private int id_promotion;
 
     public Member(int id, String name, String email, LocalDate birthDate, int id_promotion) {
         this.id = id;

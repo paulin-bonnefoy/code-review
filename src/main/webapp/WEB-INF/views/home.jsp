@@ -15,7 +15,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>When Is My Code Review?</title>
+
 
     <!-- Bootstrap CSS -->
     <link href="./resources/css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -29,10 +29,12 @@
 
 <body>
 
-<div id="wrapper">
+<div id="wrapper">​
+219
+
 
     <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-static-top container-fluid" role="navigation" style="margin-bottom: 0">
+    <nav class="navbar navbar-default navbar-static-top container-fluid" role="navigation" style="margin-bottom: 0; background-color: #edecec">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -40,7 +42,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">When Is My Code Review?</a>
+            <a href="home"><img src="./resources/img/MyCodeReview.png" class="logo" alt=""  style="max-width: 200px"></a>
         </div>
         <!-- /.navbar-header -->
 
@@ -50,11 +52,11 @@
                     <i class="fa fa-gear fa-fw"></i> Gérer les code reviews <i class="fa fa-caret-down"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-user">
-                    <li><a href="add_promotion.html"><i class="fa fa-users fa-fw"></i> Ajouter une promotion</a>
+                    <li><a href="promotions"><i class="fa fa-users fa-fw"></i> Ajouter une promotion</a>
                     </li>
-                    <li><a href="add_member.html"><i class="fa fa-user fa-fw"></i> Ajouter un membre</a>
+                    <li><a href="members"><i class="fa fa-user fa-fw"></i> Ajouter un membre</a>
                     </li>
-                    <li><a href="add_event.html"><i class="fa fa-calendar fa-fw"></i> Créer un rendez-vous</a>
+                    <li><a href="codereviews"><i class="fa fa-calendar fa-fw"></i> Créer un rendez-vous</a>
                     </li>
                 </ul>
             </li>
@@ -71,11 +73,12 @@
         <!-- /.row -->
         <div class="row">
             <div class="col-lg-4 col-md-4">
-                <div class="panel panel-primary">
+                <div class="panel" style="background-color: #43009C; color: white">
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xs-3">
                                 <i class="fa fa-users fa-5x"></i>
+                                <img src="./resources/img/promotion_icon.png" style="max-height: 80px">
                             </div>
                             <div class="col-xs-9 text-right">
                                 <div class="huge">4</div>
@@ -83,7 +86,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="add_promotion.html">
+                    <a href="promotions">
                         <div class="panel-footer">
                             <span class="pull-left">Ajouter une promotion</span>
                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -93,11 +96,12 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-4">
-                <div class="panel panel-green">
+                <div class="panel"  style="background-color: #CB1567; color: white">
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xs-3">
                                 <i class="fa fa-user fa-5x"></i>
+                                <img src="./resources/img/member_icon.png" style="max-height: 80px">
                             </div>
                             <div class="col-xs-9 text-right">
                                 <div class="huge">46</div>
@@ -105,7 +109,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="add_member.html">
+                    <a href="members">
                         <div class="panel-footer">
                             <span class="pull-left">Ajouter un membre</span>
                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -115,11 +119,12 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-4">
-                <div class="panel panel-yellow">
+                <div class="panel "  style="background-color: #F196BF; color: white">
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xs-3">
                                 <i class="fa fa-calendar fa-5x"></i>
+                                <img src="./resources/img/codereview_icon.png" style="max-height: 80px">
                             </div>
                             <div class="col-xs-9 text-right">
                                 <div class="huge">3</div>
@@ -127,7 +132,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="add_event.html">
+                    <a href="codereviews">
                         <div class="panel-footer">
                             <span class="pull-left">Ajouter une code review</span>
                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -160,69 +165,18 @@
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <tr>
-                                            <td>Lortola</td>
-                                            <td>lortola@e-biz.fr</td>
-                                            <td>Février</td>
-                                            <td  class="text-right">
-                                                <a href="#" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Modifier</a>
-                                                <a href="#" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Supprimer</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Alebel</td>
-                                            <td>alebel@e-biz.fr</td>
-                                            <td>Avril</td>
-                                            <td class="text-right">
-                                                <a href="#" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Modifier</a>
-                                                <a href="#" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Supprimer</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Kbottero</td>
-                                            <td>kbottero@e-biz.fr</td>
-                                            <td>Mars</td>
-                                            <td class="text-right">
-                                                <a href="#" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Modifier</a>
-                                                <a href="#" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Supprimer</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>rlarroque</td>
-                                            <td>rlarroque@e-biz.fr</td>
-                                            <td>Février</td>
-                                            <td class="text-right">
-                                                <a href="#" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Modifier</a>
-                                                <a href="#" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Supprimer</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>hdelabatte</td>
-                                            <td>hdelabatte@e-biz.fr</td>
-                                            <td>Mars</td>
-                                            <td class="text-right">
-                                                <a href="#" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Modifier</a>
-                                                <a href="#" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Supprimer</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>gnostrenoff</td>
-                                            <td>gnostrenoff@e-biz.fr</td>
-                                            <td>Mars</td>
-                                            <td class="text-right">
-                                                <a href="#" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Modifier</a>
-                                                <a href="#" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Supprimer</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>hbernardi</td>
-                                            <td>hbernardi@e-biz.fr</td>
-                                            <td>Avril</td>
-                                            <td class="text-right">
-                                                <a href="#" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Modifier</a>
-                                                <a href="#" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Supprimer</a>
-                                            </td>
-                                        </tr>
+
+                                        <c:forEach var="member"  items="${requestScope['listMembers']}" >
+                                            <tr>
+                                                <td>${member.name}</td>
+                                                <td>${member.email}</td>
+                                                <td>${member.promotion}</td>
+                                                <td  class="text-right">
+                                                    <a href="#" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Modifier</a>
+                                                    <a href="#" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Supprimer</a>
+                                                </td>
+                                            </tr>
+                                        </c:forEach>
                                         </tbody>
                                     </table>
                                     <div class="text-center">
@@ -250,21 +204,20 @@
                     </div>
                     <div class="panel-body">
                         <table class="table table-striped">
-                            <tr>
-                                <td><a href="${pageContext.request.contextPath}/review?id=1">Code review 1</a>/td>
-                                <td>Promo Février</td>
-                                <td class="text-right"><span class="text-muted small">24/02/2017</span></td>
-                            </tr>
-                            <tr>
-                                <td>Code review 2</td>
-                                <td>Promo Février</td>
-                                <td class="text-right"><span class="text-muted small">05/03/2017</span></td>
-                            </tr>
-                            <tr>
-                                <td>Code review 1</td>
-                                <td>Promo Mars</td>
-                                <td class="text-right"><span class="text-muted small">10/03/2017</span></td>
-                            </tr>
+
+                            <c:forEach var="code_review"  items="${requestScope['listCodeReviews']}" >
+                                <tr>
+                                    <td>${code_review.id}</td>
+                                    <td>${code_review.promotion.name}</td>
+                                    <td>${code_review.datetime}</td>
+
+                                    <td  class="text-right">
+                                        <a href="#" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Modifier</a>
+                                        <a href="#" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Supprimer</a>
+                                    </td>
+                                </tr>
+                            </c:forEach>
+
                         </table>
                         <a href="#" class="btn btn-default btn-block">Programmer une code review</a>
                     </div>
@@ -279,21 +232,14 @@
                     <!-- /.panel-heading -->
                     <div class="panel-body">
                         <div class="list-group">
-                            <a href="#" class="list-group-item">
-                                <i class="fa fa-users fa-fw"></i> Promo Février
-                                <span class="pull-right text-muted small"><em>8 membres</em>
+                            <c:forEach var="promotion"  items="${requestScope['listPromotions']}" >
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-users fa-fw"></i> ${promotion.id}
+                                    <span class="pull-right text-muted small"><em>${promotion.name}</em>
                                     </span>
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <i class="fa fa-users fa-fw"></i> Promo Mars
-                                <span class="pull-right text-muted small"><em>6 membres</em>
-                                    </span>
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <i class="fa fa-users fa-fw"></i> Promo Avril
-                                <span class="pull-right text-muted small"><em>0 membre</em>
-                                    </span>
-                            </a>
+                                </a>
+                            </c:forEach>
+
                         </div>
                         <!-- /.list-group -->
                         <a href="#" class="btn btn-default btn-block">Créer une nouvelle promotion</a>
@@ -313,7 +259,8 @@
 <footer class="footer">
     <div class="container">
         <div class="row text-center">
-            <img src="./resources/img/ebusiness.png" class="logo" alt=""> &bullet; 2017
+            <img src="./resources/img/logo_takima_horizontal.png" class="logo" alt="">
+            <h4>2023</h4>
         </div>
     </div>
 </footer>

@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68aa635b-65b2-4ba4-b6e6-8d6777923726" name="Changes" comment="">
+
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/dao/CodeReviewDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/dao/CodeReviewDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/servlet/reviews/DeleteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/servlet/reviews/DeleteServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/servlet/reviews/ReviewServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/servlet/reviews/ReviewServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/reviews/details.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/reviews/details.jsp" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +22,6 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="AnnotationType" />
         <option value="Jsp File" />
         <option value="Class" />
       </list>
@@ -65,13 +66,16 @@
     "WebServerToolWindowFactoryState": "false",
     "database.data.extractors.current.export.id": "Comma-separated (CSV)_id",
     "git-widget-placeholder": "newReview",
+
     "last_opened_file_path": "/home/takima/Bureau/code-review/DBJar/mysql-connector-java-8.1.0.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+
     "project.structure.last.edited": "Project",
+
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "MavenSettings",
@@ -87,13 +91,11 @@
   }
 }]]></component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="fr.takima.codereview.servlet.reviews" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/fr/takima/codereview/servlet" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources/img" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
       <recent name="$PROJECT_DIR$/src/main/webapp" />
     </key>
@@ -101,14 +103,14 @@
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn wildfly:deploy" />
-      <command value="mvn wildfly:dev" />
-      <command value="mvn install" />
-      <command value="mvn wildfly:run" />
       <command value="mvn clean install" />
+      <command value="mvn wildfly:run" />
       <command value="mvn clean" />
+      <command value="mvn install" />
+      <command value="mvn wildfly:dev" />
     </option>
   </component>
-  <component name="RunManager" selected="Database Script.DBModel.sql">
+  <component name="RunManager" selected="Application.main">
     <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="fr.takima.codereview.main.main" />
       <module name="code-review" />
@@ -130,13 +132,26 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Database Script.DBModel.sql" />
         <item itemvalue="Application.main" />
+        <item itemvalue="Database Script.DBModel.sql" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="68aa635b-65b2-4ba4-b6e6-8d6777923726" name="Changes" comment="" />
+      <created>1694693565509</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1694693565509</updated>
+      <workItem from="1694693566516" duration="1693000" />
+      <workItem from="1694695300711" duration="888000" />
+      <workItem from="1694696240617" duration="11000" />
+      <workItem from="1694697262503" duration="1877000" />
+      <workItem from="1694768882301" duration="1013000" />
+      <workItem from="1695281382102" duration="3199000" />
+    </task>
     <servers />
   </component>
   <component name="XDebuggerManager">
@@ -149,5 +164,6 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+
   </component>
 </project>
