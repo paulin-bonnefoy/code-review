@@ -1,9 +1,13 @@
 
 package fr.takima.codereview.dao;
 
+        import fr.takima.codereview.connection.ConnectionManager;
+        import fr.takima.codereview.exceptions.DaoException;
+        import fr.takima.codereview.exceptions.ServiceException;
         import fr.takima.codereview.model.CodeReview;
 
 
+        import java.sql.*;
         import java.time.LocalDate;
         import java.util.ArrayList;
         import java.util.List;
@@ -63,7 +67,7 @@ public class CodeReviewDao {
                 LocalDate datetime = rs.getDate("debut").toLocalDate();
                 int promo_promo_id = CodeReview.getPromo().getId();
 
-                codeReviews.add(new CodeReview(id, name, description, datetime, promo_promo_id));
+                codeReviews.add(new CodeReview(id, name, description, datetime, promo_id));
             }
             return codeReviews;
         } catch (SQLException e) {
