@@ -11,10 +11,10 @@ public class MemberDao {
 
     public static MemberDao instance;
 
-    private static final String CREATE_MEMBER_QUERY = "INSERT INTO member(name, email, birthdate, idmember, promo_promo_id) VALUES(?, ?, ?, ?, ?);";
-    private static final String MODIFY_MEMBER_QUERY = "UPDATE member SET name=?, email=?, birthdate=?, idmember=?, promo_promo_id=? WHERE idmember=?;";
-    private static final String DELETE_MEMBER_QUERY = "DELETE FROM member WHERE idmember=?;";
-    private static final String FIND_MEMBER_QUERY = "SELECT name, email, birthdate, idmember, promo_promo_id FROM member WHERE idmember=?;";
+    private static final String CREATE_MEMBER_QUERY = "INSERT INTO member(name, email, birthdate, promo_id) VALUES(?, ?, ?, ?);";
+    private static final String MODIFY_MEMBER_QUERY = "UPDATE member SET name=?, email=?, birthdate=?, promo_id=? WHERE id=?;";
+    private static final String DELETE_MEMBER_QUERY = "DELETE FROM member WHERE id=?;";
+    private static final String FIND_MEMBER_QUERY = "SELECT name, email, birthdate, promo_id FROM member WHERE id=?;";
     private static final String COUNT_MEMBER_QUERY = "SELECT COUNT(*) AS total FROM member;";
 
     public static MemberDao getInstance() {
@@ -93,10 +93,10 @@ public class MemberDao {
             String name = rs.getString("name");
             String email = rs.getString("email");
             LocalDate birthdate = rs.getDate("birthdate").toLocalDate();
-            int promo_promo_id = rs.getInt("promo_promo_id");
+            int promo_id = rs.getInt("promo_id");
 
             rs.close();
-            return new Member(id, name, email, birthdate, promo_promo_id);
+            return new Member(id, name, email, birthdate, promo_id);
         }
         catch (SQLException e){
             e.printStackTrace();

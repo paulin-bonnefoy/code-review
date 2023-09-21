@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed7772a1-59c4-441a-adf0-dfd7fb4eb69b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/dao/PromotionDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/service/MembreService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/service/PromotionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/70719cfb-a3ea-4ca7-a76f-1afd55fbf95b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/70719cfb-a3ea-4ca7-a76f-1afd55fbf95b.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/70719cfb-a3ea-4ca7-a76f-1afd55fbf95b/storage_v2/_src_/schema/mydb.Kl8zAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/dao/MemberDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/dao/MemberDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/dao/PromotionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/dao/PromotionDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/main/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/main/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/model/CodeReview.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/model/CodeReview.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/model/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/model/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/model/Promotion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/takima/codereview/model/Promotion.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +22,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "git-widget-placeholder": "Rebasing develop"
+    "git-widget-placeholder": "data",
+    "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
   <component name="TaskManager">
