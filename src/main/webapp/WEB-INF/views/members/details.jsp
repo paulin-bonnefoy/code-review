@@ -44,11 +44,11 @@
                     <i class="fa fa-gear fa-fw"></i> Gérer les code reviews <i class="fa fa-caret-down"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-user">
-                    <li><a href="add_promotion.html"><i class="fa fa-users fa-fw"></i> Ajouter une promotion</a>
+                    <li><a href="promotions"><i class="fa fa-users fa-fw"></i> Ajouter une promotion</a>
                     </li>
-                    <li><a href="add_member.html"><i class="fa fa-user fa-fw"></i> Ajouter un membre</a>
+                    <li><a href="members"><i class="fa fa-user fa-fw"></i> Ajouter un membre</a>
                     </li>
-                    <li><a href="add_event.html"><i class="fa fa-calendar fa-fw"></i> Créer un rendez-vous</a>
+                    <li><a href="codereviews"><i class="fa fa-calendar fa-fw"></i> Créer un rendez-vous</a>
                     </li>
                 </ul>
             </li>
@@ -58,7 +58,10 @@
     <div id="page-wrapper" class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header" style="display: flex; justify-content: center">Ajouter un membre</h1>
+                <div style="display:flex; justify-content: center;">
+                    <img src="./resources/img/member.jpg" style="max-width: 400px; ">
+                </div>
+                <h1 class="page-header" style="display: flex; justify-content: center; color: #43009C">Ajouter un membre</h1>
             </div>
             <!-- /.col-lg-12 -->
         </div>

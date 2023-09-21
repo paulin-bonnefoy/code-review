@@ -76,6 +76,7 @@
                         <div class="row">
                             <div class="col-xs-3">
                                 <i class="fa fa-users fa-5x"></i>
+                                <img src="./resources/img/promotion_icon.png" style="max-height: 80px">
                             </div>
                             <div class="col-xs-9 text-right">
                                 <div class="huge">4</div>
@@ -98,6 +99,7 @@
                         <div class="row">
                             <div class="col-xs-3">
                                 <i class="fa fa-user fa-5x"></i>
+                                <img src="./resources/img/member_icon.png" style="max-height: 80px">
                             </div>
                             <div class="col-xs-9 text-right">
                                 <div class="huge">46</div>
@@ -120,6 +122,7 @@
                         <div class="row">
                             <div class="col-xs-3">
                                 <i class="fa fa-calendar fa-5x"></i>
+                                <img src="./resources/img/codereview_icon.png" style="max-height: 80px">
                             </div>
                             <div class="col-xs-9 text-right">
                                 <div class="huge">3</div>
@@ -167,7 +170,7 @@
                                                 <td>${member.email}</td>
                                                 <td>${member.promotion}</td>
                                                 <td  class="text-right">
-                                                    <a href="#" class="btn btn-sm " style="background-color: #43009C; color: white"><i class="fa fa-pencil"></i> Modifier</a>
+                                                    <a href="#" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Modifier</a>
                                                     <a href="#" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Supprimer</a>
                                                 </td>
                                             </tr>

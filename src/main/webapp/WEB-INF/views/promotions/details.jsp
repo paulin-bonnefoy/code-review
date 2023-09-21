@@ -44,11 +44,11 @@
                     <i class="fa fa-gear fa-fw"></i> Gérer les code reviews <i class="fa fa-caret-down"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-user">
-                    <li><a href="promotions/details"><i class="fa fa-users fa-fw"></i> Ajouter une promotion</a>
+                    <li><a href="promotions"><i class="fa fa-users fa-fw"></i> Ajouter une promotion</a>
                     </li>
-                    <li><a href="members/details"><i class="fa fa-user fa-fw"></i> Ajouter un membre</a>
+                    <li><a href="members"><i class="fa fa-user fa-fw"></i> Ajouter un membre</a>
                     </li>
-                    <li><a href="codereviews/details"><i class="fa fa-calendar fa-fw"></i> Créer un rendez-vous</a>
+                    <li><a href="codereviews"><i class="fa fa-calendar fa-fw"></i> Créer un rendez-vous</a>
                     </li>
                 </ul>
             </li>
