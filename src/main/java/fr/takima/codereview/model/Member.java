@@ -71,7 +71,7 @@ public class Member {
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", birthDate=" + birthDate +
-                ", id_promotion=" + id_promotion +
+                ", promotion=" + promotion.toString() +
                 '}';
     }
 }
